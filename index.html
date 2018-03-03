@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Art Gallery Assignment</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet">
+  <link rel="stylesheet" href="cssfile.css">
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Home</a>
+    </div>
+    <ul class="nav navbar-nav">
+
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Art Works <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#" onclick="return monaLisa()">Mona Lisa</a></li>
+          <li><a href="#" onClick="return americangothic()">American Gothic</a></li>
+          <li><a href="#" onClick="return starrynight()">Starry Night</a></li>
+          <li><a href="#" onClick="return thepersistenceofmemory()">The Prsistence Of Memory</a></li>
+          <li><a href="#" onClick="return guernica()">Guernica</a></li>
+        </ul>
+      </li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Artists <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#" onclick="return grantWood()">Grant Wood</a></li>
+          <li><a href="#" onclick="return leonardo()">Leonardo da Vinci</a></li>
+          <li><a href="#" onclick="return vincent()">Vincent Van Gogh</a></li>
+          <li><a href="#" onclick="return dali()">Salvador Dali</a></li>
+          <li><a href="#" onclick="return picasso()">Pablo Picasso</a></li>
+        </ul>
+      </li>
+
+    </ul>
+    <div class="modal fade" id="firstArtWork" role="dialog">
+   <div class="modal-dialog">
+
+     <!-- Modal content-->
+     <div class="modal-content">
+       <div class="modal-header">
+         <button type="button" class="close" data-dismiss="modal">&times;</button>
+         <h1 id= "modalHeader" class="modal-title"></h1>
+
+       </div>
+       <div align="center" id="imageinfo" class "modal-body">
+         <table "width:100%">
+           <td id ="modalBody"; width="40%"></td>
+           <td height = "100%">
+             <table height:"100%"; width="90%";>
+                 <tr>
+                   <th id="datetitle" height="57">Date</th>
+                   <td id="date"></td>
+                 </tr>
+                 <tr>
+                   <th id="typetitle" height="57">Type</th>
+                   <td id="type"></td>
+                 </tr>
+                 <tr>
+                    <th id="dimensionstitle" height="57">Dimensions</th>
+                    <td id="dimention"></td>
+                 </tr>
+                 <tr>
+                   <th id="locationtitle" height="57">Location</th>
+                   <td id="location"></td>
+                 </tr>
+                 <tr>
+                   <th id="artisttitle" height="57">Artist</th>
+                   <td id="artist"></td>
+                 </tr>
+                 <tr>
+                   <th id="pricetitle" height="57">Price</th>
+                   <td id="price"></td>
+                 </tr>
+                 <tr>
+                   <th id="genretitle" height="57">Genre</th>
+                   <td id="genre"></td>
+                 </tr>
+               </table>
+               </td>
+           </table>
+       <div class="modal-footer">
+         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       </div>
+     </div>
+
+   </div>
+ </div>
+  </div>
+</nav>
+
+<h1> <strong> Our Team </strong> </h1>
+<br />
+<h2> <strong> Manrag Nagra </strong> - Student Number: 500693122 </h2>
+<br />
+<h2> <strong> Ronak Patel </strong> - Student Number: 500702320</h2>
+<br />
+<h2> <strong> Gurkirat Singh </strong> - Student Number: 500695229 </h2>
+<br />
+<footer>Copyright &copy; by Manrag/Ronak/Gurkirat</footer>
+
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

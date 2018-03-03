@@ -1,0 +1,16 @@
+h1,h2,nav,footer{
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+body{
+  background-color: #D3D3D3;
+}
+table {
+
+  padding: 0 8px 8px 0;
+}
+td {
+
+  padding: 0 8px 8px 0;
+}
