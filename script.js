@@ -7,7 +7,7 @@ function cart()
 
 function paintingCase()
 {
-  document.getElementById('addToCart').innerHTML = '<button  type=\"button\" class=\"btn btn-default glyphicon glyphicon-shopping-cart\" onclick=\"return cart()\"></button><button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>';
+
   document.getElementById("datetitle").innerHTML = 'Date';
   document.getElementById("typetitle").innerHTML = 'Type';
   document.getElementById("dimensionstitle").innerHTML = 'Dimensions';
@@ -18,7 +18,7 @@ function paintingCase()
 }
 function artistCase()
 {
-  document.getElementById('addToCart').innerHTML = '<button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>';
+  
   document.getElementById("datetitle").innerHTML = 'Date of Birth';
   document.getElementById("typetitle").innerHTML = 'Date of Death';
   document.getElementById("dimensionstitle").innerHTML = 'Place of Living';
@@ -163,3 +163,37 @@ function guernica()
   document.getElementById("genre").innerHTML = 'Surrealism';
   $(artmodal).modal();
 }
+$('.minus-btn').on('click', function(e) {
+    		e.preventDefault();
+    		var $this = $(this);
+    		var $input = $this.closest('div').find('input');
+    		var value = parseInt($input.val());
+
+    		if (value > 1) {
+    			value = value - 1;
+    		} else {
+    			value = 0;
+    		}
+
+        $input.val(value);
+
+    	});
+
+    	$('.plus-btn').on('click', function(e) {
+    		e.preventDefault();
+    		var $this = $(this);
+    		var $input = $this.closest('div').find('input');
+    		var value = parseInt($input.val());
+
+    		if (value < 100) {
+      		value = value + 1;
+    		} else {
+    			value =100;
+    		}
+
+    		$input.val(value);
+    	});
+
+      $('.like-btn').on('click', function() {
+        $(this).toggleClass('is-active');
+      });
