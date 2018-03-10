@@ -79,6 +79,22 @@
         </div>
       </div>
     </div>
+    <div class="modal fade" id="cart" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h1 id= "modalHeader" class="modal-title"></h1>
+          </div>
+          <div align="center" id="imageinfo" class="modal-body">
+          <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   </nav>
 
   <br />
@@ -126,6 +142,42 @@
   <h2> <strong> Gurkirat Singh </strong> - Student Number: 500695229 </h2>
   <br />
 
+  <div class = "container" align="center">
+		<h3> <strong>Shipping Address</strong> </h3>
+		<br />
+		<form action = "log.php" method="post">
+			<label><b>First Name</b></label>
+			<br />
+		    <input type="text" placeholder="Enter First Name" name="usere" required>
+			<br />
+			<label><b>Last Name</b></label>
+			<br />
+		    <input type="text" placeholder="Enter Last Name" name="usere" required>
+			<br />
+			<label><b>Address</b></label>
+			<br />
+		    <input type="address" placeholder="Enter Address" name="add" required>
+			<br />
+      <label><b>Postal Code</b></label>
+			<br />
+		    <input type="postalcode" placeholder="Enter Postal Code" name="add" required>
+			<br />
+      <label><b>Enter City</b></label>
+			<br />
+		    <input type="city" placeholder="Enter City" name="add" required>
+			<br />
+		    <label><b>Email</b></label>
+			<br />
+		    <input type="email" placeholder="Enter Email" name="email" required>
+			<br />
+		    <label><b>Phone Number</b></label>
+			<br />
+		    <input type="phone" placeholder="Enter Phone Number" name="phone" required>
+			<br /><br />
+	        <button type="submit" class="signupbtn">Submit Shipping Address</button>
+		</form>
+	</div>
+<br /> <br />
   <footer>Copyright &copy; by Manrag/Ronak/Gurkirat</footer>
   <script type="text/javascript" src="script.js"></script>
 

@@ -1,24 +1,19 @@
-h1,h2,nav,button,a,footer{
+h1,h2,h3,nav,button,a,label,input::placeholder,footer{
   text-align: center;
-  font-family: 'Cormorant Garamond', serif;
-}
-
-h4{
-  font-family: 'Cormorant Garamond', serif;
 }
 
 body{
   background-color: #D3D3D3;
+    font-family: 'Cormorant Garamond', serif;
 }
 table {
 
   padding: 0 8px 8px 0;
 }
-td {
 
+td {
   padding: 0 8px 8px 0;
 }
-
 
 .dropbtn {
     background-color: #696969;
