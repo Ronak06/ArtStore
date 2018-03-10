@@ -1,5 +1,9 @@
 var artmodal = document.getElementById("ArtWorks");
-
+var cartmodal = document.getElementById("cart");
+function cart()
+{
+  $(cartmodal).modal();
+}
 
 function paintingCase()
 {
