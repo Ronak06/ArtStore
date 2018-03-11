@@ -163,14 +163,14 @@ function guernica()
   document.getElementById("genre").innerHTML = 'Surrealism';
   $(artmodal).modal();
 }
-$('.minus-btn').on('click', function(e) {
+$('.minus-btn1').on('click', function(e) {
     		e.preventDefault();
     		var $this = $(this);
     		var $input = $this.closest('div').find('input');
     		var value = parseInt($input.val());
-        //var $price = $this.closest('div[class="image"]').find("div[class='total-price']").find("span[name='price']");
-        var $price = $("span[name='price']");
-        var pri = $price.innerHTML;
+        var $price = $this.closest('div').find("span[class='total-price']");
+        //var $price = $("span[name='price']");
+        var pri = parseInt($price.attr("value"));
         //alert(pri);
     		if (value > 1) {
     			value = value - 1;
@@ -179,17 +179,20 @@ $('.minus-btn').on('click', function(e) {
     		}
 
         $input.val(value);
-        $price.val(value*pri);
+        $price.html("$"+(value*pri));
 
     	});
 
-    	$('.plus-btn').on('click', function(e) {
+    	$('.plus-btn1').on('click', function(e) {
     		e.preventDefault();
     		var $this = $(this);
-    		var $input = $this.closest('div').find('input');
+    		var $input = $this.closest('div').find("input[name='name']");
     		var value = parseInt($input.val());
-        var price = document.getElementById('cartprice');
-        var pri = parseInt(price.innerHTML.substring(1));
+        //var price = document.getElementById('cartprice');
+        var $price = $this.closest("div").find("span[name='cartp']");
+        //$price.css({"color": "red", "border": "2px solid red"});
+        var pri = parseInt($price.attr("value"));
+        //var pri = parseInt(temp.substring(1));
         //price.innerHTML="test4657";
         //alert(pri);
     		if (value < 100) {
@@ -198,7 +201,7 @@ $('.minus-btn').on('click', function(e) {
     			value =100;
     		}
     		$input.val(value);
-        price.innerHTML="$"+(value*pri);
+        $price.html("$"+(value*pri));
     	});
 
       $('.like-btn').on('click', function() {
