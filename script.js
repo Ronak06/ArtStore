@@ -18,7 +18,7 @@ function paintingCase()
 }
 function artistCase()
 {
-  
+
   document.getElementById("datetitle").innerHTML = 'Date of Birth';
   document.getElementById("typetitle").innerHTML = 'Date of Death';
   document.getElementById("dimensionstitle").innerHTML = 'Place of Living';
@@ -115,7 +115,7 @@ function americangothic()
   document.getElementById("dimension").innerHTML = '74 X 62 cm';
   document.getElementById("location").innerHTML = 'Royal Academy of Arts';
   document.getElementById("artist").innerHTML = 'Grant Wood';
-  document.getElementById("price").innerHTML = '103.50';
+  document.getElementById("price").innerHTML = '125.00';
   document.getElementById("genre").innerHTML = 'Portrait';
   $(artmodal).modal();
 }
