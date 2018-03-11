@@ -18,7 +18,7 @@ function paintingCase()
 }
 function artistCase()
 {
-  
+
   document.getElementById("datetitle").innerHTML = 'Date of Birth';
   document.getElementById("typetitle").innerHTML = 'Date of Death';
   document.getElementById("dimensionstitle").innerHTML = 'Place of Living';
@@ -168,7 +168,10 @@ $('.minus-btn').on('click', function(e) {
     		var $this = $(this);
     		var $input = $this.closest('div').find('input');
     		var value = parseInt($input.val());
-
+        //var $price = $this.closest('div[class="image"]').find("div[class='total-price']").find("span[name='price']");
+        var $price = $("span[name='price']");
+        var pri = $price.innerHTML;
+        alert(pri);
     		if (value > 1) {
     			value = value - 1;
     		} else {
@@ -176,6 +179,7 @@ $('.minus-btn').on('click', function(e) {
     		}
 
         $input.val(value);
+        $price.val(value*pri);
 
     	});
 
@@ -184,14 +188,17 @@ $('.minus-btn').on('click', function(e) {
     		var $this = $(this);
     		var $input = $this.closest('div').find('input');
     		var value = parseInt($input.val());
-
+        var price = document.getElementById('cartprice');
+        var pri = parseInt(price.innerHTML.substring(1));
+        //price.innerHTML="test4657";
+        alert(pri);
     		if (value < 100) {
       		value = value + 1;
     		} else {
     			value =100;
     		}
-
     		$input.val(value);
+        price.innerHTML="$"+(value*pri);
     	});
 
       $('.like-btn').on('click', function() {
