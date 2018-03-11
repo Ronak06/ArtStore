@@ -171,7 +171,7 @@ $('.minus-btn').on('click', function(e) {
         //var $price = $this.closest('div[class="image"]').find("div[class='total-price']").find("span[name='price']");
         var $price = $("span[name='price']");
         var pri = $price.innerHTML;
-        alert(pri);
+        //alert(pri);
     		if (value > 1) {
     			value = value - 1;
     		} else {
@@ -191,7 +191,7 @@ $('.minus-btn').on('click', function(e) {
         var price = document.getElementById('cartprice');
         var pri = parseInt(price.innerHTML.substring(1));
         //price.innerHTML="test4657";
-        alert(pri);
+        //alert(pri);
     		if (value < 100) {
       		value = value + 1;
     		} else {
