@@ -207,3 +207,19 @@ $('.minus-btn1').on('click', function(e) {
       $('.like-btn').on('click', function() {
         $(this).toggleClass('is-active');
       });
+$('.check').on('click', function(e) {
+  e.preventDefault();
+  alert("chjesdfhoj");
+  
+
+
+
+
+
+
+
+
+
+
+
+});
