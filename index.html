@@ -269,23 +269,23 @@
                     		<form action="log.php" method="post">
                     			<label><b>First Name</b></label>
                     			<br />
-                    		    <input type="text" placeholder="Enter First Name" name="usere" required>
+                    		    <input type="text" placeholder="Enter First Name" name="fname" required>
                     			<br /><br />
                     			<label><b>Last Name</b></label>
                     			<br />
-                    		    <input type="text" placeholder="Enter Last Name" name="usere" required>
+                    		    <input type="text" placeholder="Enter Last Name" name="lname" required>
                     			<br /><br />
                     			<label><b>Address</b></label>
                     			<br />
-                    		    <input type="address" placeholder="Enter Address" name="add" required>
+                    		    <input type="address" placeholder="Enter Address" name="address" required>
                     			<br /><br />
                           <label><b>Postal Code</b></label>
                     			<br />
-                    		    <input type="postalcode" placeholder="Enter Postal Code" name="add" required>
+                    		    <input type="postalcode" placeholder="Enter Postal Code" name="postalcode" pattern="[a-zA-Z][0-9][a-zA-Z][0-9][a-zA-Z][0-9]" required>
                     			<br /><br />
                           <label><b>City</b></label>
                     			<br />
-                    		    <input type="city" placeholder="Enter City" name="add" required>
+                    		    <input type="city" placeholder="Enter City" name="city" required>
                     			<br /><br />
                     		    <label><b>Email</b></label>
                     			<br />
@@ -293,7 +293,7 @@
                     			<br /><br />
                     		    <label><b>Phone Number</b></label>
                     			<br />
-                    		    <input type="phone" placeholder="Enter Phone Number" name="phone" required>
+                    		    <input type="phone" placeholder="Enter Phone Number" name="phone" pattern="[0-9]{10}" required>
                             <br /><br />
                             <div class="modal-footer">
                             <input type="submit">
