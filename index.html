@@ -114,8 +114,9 @@
                       <img src="minus.svg" alt="" />
                     </button>
                   </span>
-                  <span name="cartp" class="total-price" value="549">$549</span>
-          </div></div>
+                  <span name="cartp" class="total-price" value="100">$100</span>
+          </div>
+        </div>
 
                 <!-- Product #2 -->
       <div class="item">
@@ -230,50 +231,82 @@
               <span name="cartp" class="total-price" value="200" >$200</span>
       </div>
       </div>
-      <!-- <div>
-                 <h3 id= "modalHeader"><strong>Shipping Information</strong></h3>
-            		<br />
-            		<form action = "log.php" method="post">
-            			<label><b>First Name</b></label>
-            			<br />
-            		    <input type="text" placeholder="Enter First Name" name="usere" required>
-            			<br /><br />
-            			<label><b>Last Name</b></label>
-            			<br />
-            		    <input type="text" placeholder="Enter Last Name" name="usere" required>
-            			<br /><br />
-            			<label><b>Address</b></label>
-            			<br />
-            		    <input type="address" placeholder="Enter Address" name="add" required>
-            			<br /><br />
-                  <label><b>Postal Code</b></label>
-            			<br />
-            		    <input type="postalcode" placeholder="Enter Postal Code" name="add" required>
-            			<br /><br />
-                  <label><b>City</b></label>
-            			<br />
-            		    <input type="city" placeholder="Enter City" name="add" required>
-            			<br /><br />
-            		    <label><b>Email</b></label>
-            			<br />
-            		    <input type="email" placeholder="Enter Email" name="email" required>
-            			<br /><br />
-            		    <label><b>Phone Number</b></label>
-            			<br />
-            		    <input type="phone" placeholder="Enter Phone Number" name="phone" required>
-            			<br /><br /><br />
-                  <button type="button" class="btn btn-default">Checkout</button>
-            		</form>
-            	</div> -->
-                <div align="center" id="imageinfo" class="modal-body">
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-default check">Checkout</button>
+      <div align="center" id="imageinfo" class="modal-body">
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default check">Checkout</button>
+      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+      <div class="modal fade" id="shipping" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h1 id= "modalHeader" class="modal-title"></h1>
+            </div>
+            <div align="center" id="imageinfo" class="modal-body">
+              <div>
+                         <h3 id= "modalHeader"><strong>Shipping Information</strong></h3>
+                    		<br />
+  <div class="item">
+                        <div class="description">
+                          <span>Total</span>
+                          <span id='total'></span>
+                        </div>
+
+                        <div class="description">
+                          <span>Tax</span>
+                          <span id='tax'></span>
+                        </div>
+                        <div class="description">
+                          <span>Subtotal</span>
+                          <span id='sub'></span>
+                        </div>
+                </div>
+                    		<form action = "log.php" method="post">
+                    			<label><b>First Name</b></label>
+                    			<br />
+                    		    <input type="text" placeholder="Enter First Name" name="usere" required>
+                    			<br /><br />
+                    			<label><b>Last Name</b></label>
+                    			<br />
+                    		    <input type="text" placeholder="Enter Last Name" name="usere" required>
+                    			<br /><br />
+                    			<label><b>Address</b></label>
+                    			<br />
+                    		    <input type="address" placeholder="Enter Address" name="add" required>
+                    			<br /><br />
+                          <label><b>Postal Code</b></label>
+                    			<br />
+                    		    <input type="postalcode" placeholder="Enter Postal Code" name="add" required>
+                    			<br /><br />
+                          <label><b>City</b></label>
+                    			<br />
+                    		    <input type="city" placeholder="Enter City" name="add" required>
+                    			<br /><br />
+                    		    <label><b>Email</b></label>
+                    			<br />
+                    		    <input type="email" placeholder="Enter Email" name="email" required>
+                    			<br /><br />
+                    		    <label><b>Phone Number</b></label>
+                    			<br />
+                    		    <input type="phone" placeholder="Enter Phone Number" name="phone" required>
+                    			<br /><br /><br />
+
+                    		</form>
+                    	</div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default">Next</button>
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
               </div>
             </div>
           </div>
         </div>
       </div>
+
 
   </nav>
 
