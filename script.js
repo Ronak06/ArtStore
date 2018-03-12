@@ -1,6 +1,8 @@
 var artmodal = document.getElementById("ArtWorks");
 var cartmodal = document.getElementById("cart");
 var checkout = document.getElementById("shipping");
+var final = document.getElementById("final");
+
 function cart()
 {
   $(cartmodal).modal();
@@ -208,9 +210,17 @@ $('.minus-btn1').on('click', function(e) {
       $('.like-btn').on('click', function() {
         $(this).toggleClass('is-active');
       });
+
 $('.check').on('click', function(e) {
   e.preventDefault();
   $(cartmodal).modal("hide");
+  $(checkout).modal();
+});
+
+$('.checking').on('click', function(e) {
+  e.preventDefault();
+  $(checkout).modal("hide");
+
   var total = 0;
   var tax = 0;
 $('span[name="cartp"]').each(function(index,item){
@@ -223,10 +233,5 @@ total = (total*1.13).toFixed(2);
 $('span[id="total"]').html("$"+beforeTax);
 $('span[id="tax"]').html("$"+tax);
 $('span[id="sub"]').html("$"+total);
-//alert (beforeTax+" "+tax+" "+total);
-
-
-$(checkout).modal();
-
-
+$(final).modal();
 });

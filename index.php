@@ -251,22 +251,8 @@
               <div>
                          <h3 id= "modalHeader"><strong>Shipping Information</strong></h3>
                     		<br />
-  <div class="item">
-                        <div class="description">
-                          <span>Total</span>
-                          <span id='total'></span>
-                        </div>
 
-                        <div class="description">
-                          <span>Tax</span>
-                          <span id='tax'></span>
-                        </div>
-                        <div class="description">
-                          <span>Subtotal</span>
-                          <span id='sub'></span>
-                        </div>
-                </div>
-                    		<form action="log.php" method="post">
+                    		<form action="index.php" class="gurkirat" method="post">
                     			<label><b>First Name</b></label>
                     			<br />
                     		    <input type="text" placeholder="Enter First Name" name="fname" required>
@@ -296,12 +282,57 @@
                     		    <input type="phone" placeholder="Enter Phone Number" name="phone" pattern="[0-9]{10}" required>
                             <br /><br />
                             <div class="modal-footer">
-                            <input type="submit">
+                            <input type="submit" class="btn btn-default">
+                            <button type="button" class="btn btn-default checking">Checking</button>
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                           </div>
                     		</form>
+              </div>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="final" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h1 id= "modalHeader" class="modal-title"></h1>
             </div>
+            <div align="center" id="imageinfo" class="modal-body">
+              <div>
+                  <h3 id= "modalHeader"><strong>Final</strong></h3>
+                  <div class="item">
+                                        <div class="description">
+                                          <span>Total</span>
+                                          <span id='total'></span>
+                                        </div>
+
+                                        <div class="description">
+                                          <span>Tax</span>
+                                          <span id='tax'></span>
+                                        </div>
+                                        <div class="description">
+                                          <span>Subtotal</span>
+                                          <span id='sub'></span>
+                                        </div>
+                                        <br />
+                                        <br />
+                                        <div name="manrag">
+                                        Welcome <?php echo $_POST["fname"]; ?><br>
+                                        Your Last Name is: <?php echo $_POST["lname"]; ?><br>
+                                        Your Address is: <?php echo $_POST["address"]; ?><br>
+                                        Your Postal Code is: <?php echo $_POST["postalcode"]; ?><br>
+                                        Your City is: <?php echo $_POST["city"]; ?><br>
+                                        Your Email Address is: <?php echo $_POST["email"]; ?><br>
+                                        Your Phone Number is: <?php echo $_POST["phone"]; ?>
+                                      </div>
+                  </div>
+                  <br />
+              </div>
+            </div>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
