@@ -2,6 +2,9 @@ var artmodal = document.getElementById("ArtWorks");
 var cartmodal = document.getElementById("cart");
 var checkout = document.getElementById("shipping");
 var final = document.getElementById("final");
+var total = 0;
+var tax = 0;
+var beforeTax = 0;
 
 function cart()
 {
@@ -180,7 +183,6 @@ $('.minus-btn1').on('click', function(e) {
     		} else {
     			value = 0;
     		}
-
         $input.val(value);
         $price.html("$"+(value*pri));
 
@@ -191,13 +193,8 @@ $('.minus-btn1').on('click', function(e) {
     		var $this = $(this);
     		var $input = $this.closest('div').find("input[name='name']");
     		var value = parseInt($input.val());
-        //var price = document.getElementById('cartprice');
         var $price = $this.closest("div").find("span[name='cartp']");
-        //$price.css({"color": "red", "border": "2px solid red"});
         var pri = parseInt($price.attr("value"));
-        //var pri = parseInt(temp.substring(1));
-        //price.innerHTML="test4657";
-        //alert(pri);
     		if (value < 100) {
       		value = value + 1;
     		} else {
@@ -213,10 +210,26 @@ $('.minus-btn1').on('click', function(e) {
 
 $('.check').on('click', function(e) {
   e.preventDefault();
+
+  $('span[name="cartp"]').each(function(index,item){
+    var temp = parseInt($(item).html().substring(1));
+    total += temp;
+  });
+  beforeTax = total;
+  tax = (total*0.13).toFixed(2);
+  total = (total*1.13).toFixed(2);
   $(cartmodal).modal("hide");
   $(checkout).modal();
 });
 
+function open(){
+  $('span[id="total"]').html("$"+beforeTax);
+  $('span[id="tax"]').html("$"+tax);
+  $('span[id="sub"]').html("$"+total);
+  $("div[id='final']").modal({backdrop: 'static', keyboard: false})
+  $("div[id='final']").modal();
+}
+
 function goBack() {
-    window.open("index.php", "_self");
+    window.open("index.html", "_self");
 }
