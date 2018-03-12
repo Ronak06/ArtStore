@@ -248,7 +248,7 @@
                          <h3 id= "modalHeader"><strong>Shipping Information</strong></h3>
                     		<br />
 
-                    		<form action="index.php" method="post" onsubmit="return sample()">
+                    		<form action="index.php" method="post">
                     			<label><b>First Name</b></label>
                     			<br />
                     		    <input type="text" placeholder="Enter First Name" name="fname" required>
@@ -329,7 +329,7 @@
                   <br />
               </div>
             </div>
-              <button type="button" class="btn btn-default" onclick="goBack()">Close</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
           </div>
         </div>
       </div>

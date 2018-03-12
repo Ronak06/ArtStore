@@ -211,10 +211,6 @@ $('.check').on('click', function(e) {
   $(checkout).modal();
 });
 
-function sample(){
-  alert("Address confirmed");
-}
-
 $('.invoice').on('click', function(e) {
   var total = 0;
   var tax = 0;
