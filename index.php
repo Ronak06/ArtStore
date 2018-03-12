@@ -252,7 +252,7 @@
                          <h3 id= "modalHeader"><strong>Shipping Information</strong></h3>
                     		<br />
 
-                    		<form action="index.php" class="gurkirat" method="post">
+                    		<form action="log.php" method="post">
                     			<label><b>First Name</b></label>
                     			<br />
                     		    <input type="text" placeholder="Enter First Name" name="fname" required>
@@ -283,10 +283,10 @@
                             <br /><br />
                             <div class="modal-footer">
                             <input type="submit" class="btn btn-default">
-                            <button type="button" class="btn btn-default checking">Checking</button>
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                           </div>
                     		</form>
+
               </div>
             </div>
           </div>
@@ -319,7 +319,6 @@
                                         </div>
                                         <br />
                                         <br />
-                                        <div name="manrag">
                                         Welcome <?php echo $_POST["fname"]; ?><br>
                                         Your Last Name is: <?php echo $_POST["lname"]; ?><br>
                                         Your Address is: <?php echo $_POST["address"]; ?><br>
@@ -327,7 +326,6 @@
                                         Your City is: <?php echo $_POST["city"]; ?><br>
                                         Your Email Address is: <?php echo $_POST["email"]; ?><br>
                                         Your Phone Number is: <?php echo $_POST["phone"]; ?>
-                                      </div>
                   </div>
                   <br />
               </div>
@@ -366,6 +364,7 @@
   </div>
 <br /><br />
 <h4>View a Museum:</h4>
+<h1> I AM IN INDEX.PHP </h1>
   <div class="dropdown">
     <button class="dropbtn">Museums</button>
     <div class="dropdown-content">

@@ -217,21 +217,6 @@ $('.check').on('click', function(e) {
   $(checkout).modal();
 });
 
-$('.checking').on('click', function(e) {
-  e.preventDefault();
-  $(checkout).modal("hide");
-
-  var total = 0;
-  var tax = 0;
-$('span[name="cartp"]').each(function(index,item){
-  var temp = parseInt($(item).html().substring(1));
-  total += temp;
-});
-var beforeTax = total;
-tax = (total*0.13).toFixed(2);
-total = (total*1.13).toFixed(2);
-$('span[id="total"]').html("$"+beforeTax);
-$('span[id="tax"]').html("$"+tax);
-$('span[id="sub"]').html("$"+total);
-$(final).modal();
-});
+function goBack() {
+    window.open("index.php", "_self");
+}
